@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+
+    <h2>Age Checker</h2>
+    <input type="text" id="num1" placeholder="Enter first number">
+    <br><br>
+    <select id="operation">
+        <br></br>
+        <option value="">Select operation</option>
+        <option value="+">ADDITION</option>
+        <option value="-">DIFFERENCE</option>
+        <option value="*">MULTIPLICATION</option>
+        <option value="/">DIVISION</option>
+    </select>
+    <br><br>
+    <input type="text" id="num2" placeholder="Enter second number">
+    <button onclick="calculate()">Calculator</button>
+
+    <h2 id="result">This is the result</h2>
+
+    <script>
+        function calculate() {
+            let num1 = Number(document.getElementById('num1').value);
+            let num2 = Number(document.getElementById('num2').value);
+            let operation = document.getElementById('operation').value;
+            if (operation === "+") {
+                result = num1 + num2;
+            } else if (operation === "-") {
+                result = num1 - num2;
+            } else if (operation === "*") {
+                result = num1 * num2;
+            } else if (operation === "/") {
+                if (num2 === 0) {
+                    alert("Error: Division by zero is not allowed.");
+                    return;
+                }
+                result = num1 / num2;
+            } else {
+                alert("Invalid operator");
+                return;
+            }
+            document.getElementById('result').innerHTML = "Result: " + result;
+            
+            
+            
+        }
+    </script>
+</body>
+</html>

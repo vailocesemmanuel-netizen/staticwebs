@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Simple Website</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Logo</div>
+        <div class="links">
+            <a href="Dashboard.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="highlights.html">Highlights</a>
+            <a href="calculator.html">Services</a>
+        </div>
+
+        <div class="search">
+            <input type="text" name="" placeholder="Search">
+            <button>Search</button>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+
+        <h1>A story worth remembering</h1>
+
+        <p>
+            Discover the people, moments and stories that make this my favorite.
+        </p>
+
+        <a href="about.html" class="button">Explore More</a>
+
+        <section id="about" class="featured">
+
+            <h2>Featured Story</h2>
+
+            <p>
+                Get to know my favorite stories and the people behind them.
+            </p>
+
+            <div class="featured card">
+                <img src="imagee.png" alt="featured">
+            </div>
+
+            <h3>Favorite Story</h3>
+
+            <p>
+                Get to know my favorite stories and the people behind them.
+            </p>
+
+            <a href="highlights.html" class="button">
+                See Highlights
+            </a>
+
+        </section>
+        <script>
+            function logout() {
+                if (confirm("Are you sure you want to logout?")) {
+                    alert("You have been logged out.");
+                    window.location.href = "login.html";
+                }else {
+                    alert("Logout canceled.");
+                }
+            }
+            </script>
+    
+
+</body>
+</html>
+
